@@ -29,24 +29,6 @@ namespace WpfHW9
 
         bool isTrue;
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            string fontName = (sender as ComboBox).SelectedItem.ToString();
-            if (textBox != null)
-            {
-                textBox.FontFamily = new FontFamily(fontName);
-            }
-        }
-
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            string fontSize = (sender as ComboBox).SelectedItem.ToString();
-            if (textBox != null)
-            {
-                textBox.FontSize = Convert.ToDouble(fontSize);
-            }
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             textBox.FontStyle = FontStyles.Normal;
@@ -68,25 +50,25 @@ namespace WpfHW9
             textBox.TextDecorations = TextDecorations.Underline;
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            if (isTrue && textBox != null)
-            {
-                textBox.Foreground = new SolidColorBrush(Colors.Black);
-            }
-            else if (isTrue == false && textBox != null)
-            {
-                textBox.Foreground = new SolidColorBrush(Colors.White);
-            }
-        }
+        //private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        //{
+        //    if (isTrue && textBox != null)
+        //    {
+        //        textBox.Foreground = new SolidColorBrush(Colors.Black);
+        //    }
+        //    else if (isTrue == false && textBox != null)
+        //    {
+        //        textBox.Foreground = new SolidColorBrush(Colors.White);
+        //    }
+        //}
 
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
-        {
-            if (textBox != null)
-            {
-                textBox.Foreground = new SolidColorBrush(Colors.Red);
-            }
-        }
+        //private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        //{
+        //    if (textBox != null)
+        //    {
+        //        textBox.Foreground = new SolidColorBrush(Colors.Red);
+        //    }
+        //}
 
         private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
         {
